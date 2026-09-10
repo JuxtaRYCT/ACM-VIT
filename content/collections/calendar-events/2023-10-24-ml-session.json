@@ -1,0 +1,13 @@
+{
+  "slug": "2023-10-24-ml-session",
+  "order": 202310242100,
+  "id": "2023-10-24-ml-session",
+  "title": "Machine Learning Session - GANs",
+  "date": "2023-10-24",
+  "startTime": "21:00",
+  "endTime": "22:30",
+  "category": "workshop",
+  "description": "Forktober session on generative adversarial networks, led by Rohit Jindal.",
+  "location": "YouTube Live",
+  "href": "/events/forktober"
+}

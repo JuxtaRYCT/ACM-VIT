@@ -1,0 +1,13 @@
+{
+  "slug": "2023-11-08-app-dev-session",
+  "order": 202311082100,
+  "id": "2023-11-08-app-dev-session",
+  "title": "App Development Session",
+  "date": "2023-11-08",
+  "startTime": "21:00",
+  "endTime": "22:30",
+  "category": "workshop",
+  "description": "App development session for Forktober, rescheduled from October.",
+  "location": "YouTube Live",
+  "href": "/events/forktober"
+}

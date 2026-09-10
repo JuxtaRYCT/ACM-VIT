@@ -1,0 +1,13 @@
+{
+  "slug": "2025-10-17-forktober",
+  "order": 202510170000,
+  "id": "2025-10-17-forktober",
+  "title": "Forktober 2025 - Repositories Live",
+  "date": "2025-10-17",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "event",
+  "description": "Forktober repositories opened for contributions: Digital-Circuit-Simulator, a visual logic-circuit builder; open-with-browser, a Tauri and Rust link manager that routes URLs to the right browser profile; and scrag, an adaptive scraper for RAG pipelines. All Hacktoberfest-approved.",
+  "location": "Online",
+  "href": "/events/forktober"
+}

@@ -1,0 +1,12 @@
+{
+  "slug": "2023-06-04-hackstory-day1",
+  "order": 202306041200,
+  "id": "2023-06-04-hackstory-day1",
+  "title": "HackStory 2023 - Day 1",
+  "date": "2023-06-04",
+  "startTime": "12:00",
+  "endTime": "23:59",
+  "category": "event",
+  "description": "Opening day of HackStory, ACM-VIT's hackathon at Yantra 2023. Volunteers ran shifts from noon and the opening was streamed on YouTube. Tracks and problem statements were curated by the research domain; the portal backend was built by the web team in under two days.",
+  "location": "Anna Auditorium, VIT Vellore"
+}

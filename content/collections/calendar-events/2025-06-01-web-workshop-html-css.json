@@ -1,0 +1,12 @@
+{
+  "slug": "2025-06-01-web-workshop-html-css",
+  "order": 202506011600,
+  "id": "2025-06-01-web-workshop-html-css",
+  "title": "Web Unwebbed - HTML and CSS",
+  "date": "2025-06-01",
+  "startTime": "16:00",
+  "endTime": "18:30",
+  "category": "workshop",
+  "description": "First of the summer web development series: how pages are structured and styled, the DOM tree, selectors, the box model, Flexbox and Grid, media queries and responsive design.",
+  "location": "Microsoft Teams"
+}

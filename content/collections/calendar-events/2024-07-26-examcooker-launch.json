@@ -1,0 +1,13 @@
+{
+  "slug": "2024-07-26-examcooker-launch",
+  "order": 202407260000,
+  "id": "2024-07-26-examcooker-launch",
+  "title": "ExamCooker Launch",
+  "date": "2024-07-26",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "launch",
+  "description": "ExamCooker went live at exam-cooker.acmvit.in - notes, past papers, user uploads, forum discussions and a subject-wise resource repository, signed in with a VIT email.",
+  "location": "Online",
+  "href": "/projects/examcooker"
+}

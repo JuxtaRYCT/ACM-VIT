@@ -1,0 +1,12 @@
+{
+  "slug": "2025-03-09-sc-coding-contest",
+  "order": 202503092230,
+  "id": "2025-03-09-sc-coding-contest",
+  "title": "Senior Core Coding Contest",
+  "date": "2025-03-09",
+  "startTime": "22:30",
+  "endTime": "23:59",
+  "category": "event",
+  "description": "Internal HackerRank contest for the senior core, pitched at the level of a company online assessment.",
+  "location": "HackerRank"
+}

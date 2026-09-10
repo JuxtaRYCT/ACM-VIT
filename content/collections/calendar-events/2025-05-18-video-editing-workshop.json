@@ -1,0 +1,12 @@
+{
+  "slug": "2025-05-18-video-editing-workshop",
+  "order": 202505182200,
+  "id": "2025-05-18-video-editing-workshop",
+  "title": "Video Editing 101",
+  "date": "2025-05-18",
+  "startTime": "22:00",
+  "endTime": "23:45",
+  "category": "workshop",
+  "description": "Beginner workshop on Premiere Pro and DaVinci Resolve, taught by recreating a full example video: trimming, keyframes, transitions, text overlays, adjustment layers and speed ramps.",
+  "location": "Google Meet"
+}

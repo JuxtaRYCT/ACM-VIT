@@ -1,0 +1,12 @@
+{
+  "slug": "2025-06-04-web-workshop-javascript",
+  "order": 202506041600,
+  "id": "2025-06-04-web-workshop-javascript",
+  "title": "Web Unwebbed - Introduction to JavaScript",
+  "date": "2025-06-04",
+  "startTime": "16:00",
+  "endTime": "18:00",
+  "category": "workshop",
+  "description": "Second web session: JavaScript syntax and key features, events and DOM manipulation, JSON, and the request-response cycle seen through the browser network tab.",
+  "location": "Microsoft Teams"
+}

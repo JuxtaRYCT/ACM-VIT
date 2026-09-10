@@ -1,0 +1,13 @@
+{
+  "slug": "2025-02-27-deepfake-workshop",
+  "order": 202502270800,
+  "id": "2025-02-27-deepfake-workshop",
+  "title": "Deepfake: The Digital Doppelganger",
+  "date": "2025-02-27",
+  "startTime": "08:00",
+  "endTime": "18:00",
+  "category": "workshop",
+  "description": "Quality Week workshop on AI and fake media: fundamentals of neural networks and CNNs, live face swaps, then hands-on work with pre-trained models for detecting manipulated images, video and phishing email.",
+  "location": "Sarojini Naidu Gallery, SJT 6th Floor, VIT Vellore",
+  "href": "/events/deepfake"
+}

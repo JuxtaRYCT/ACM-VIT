@@ -1,0 +1,13 @@
+{
+  "slug": "2024-10-11-forktober",
+  "order": 202410110000,
+  "id": "2024-10-11-forktober",
+  "title": "Forktober 2024",
+  "date": "2024-10-11",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "event",
+  "description": "ACM-VIT's Hacktoberfest drive for the year. With the month already underway the chapter skipped new repositories and instead pushed contributions to existing Hacktoberfest-tagged projects, alongside member-led sessions on the ACM-VIT YouTube channel.",
+  "location": "Online",
+  "href": "/events/forktober"
+}

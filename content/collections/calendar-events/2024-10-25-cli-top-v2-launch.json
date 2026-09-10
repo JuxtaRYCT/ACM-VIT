@@ -1,0 +1,13 @@
+{
+  "slug": "2024-10-25-cli-top-v2-launch",
+  "order": 202410250000,
+  "id": "2024-10-25-cli-top-v2-launch",
+  "title": "CLI-Top v2.0 Launch",
+  "date": "2024-10-25",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "launch",
+  "description": "CLI-Top v2.0 shipped a year after the original: the whole of VTOP in the terminal, build size halved, and many features rewritten with custom helper renderers.",
+  "location": "Online",
+  "href": "/projects/cli-top"
+}

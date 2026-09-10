@@ -1,0 +1,12 @@
+{
+  "slug": "2024-06-30-cc-math-session",
+  "order": 202406302000,
+  "id": "2024-06-30-cc-math-session",
+  "title": "Competitive Coding Session - Mathematics for CP",
+  "date": "2024-06-30",
+  "startTime": "20:00",
+  "endTime": "22:00",
+  "category": "workshop",
+  "description": "Session on the mathematics competitive programming leans on - Euclid's algorithm, modular inverse, binary exponentiation, the sieve and Euler's totient.",
+  "location": "Google Meet"
+}

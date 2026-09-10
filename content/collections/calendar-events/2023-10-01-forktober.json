@@ -1,0 +1,13 @@
+{
+  "slug": "2023-10-01-forktober",
+  "order": 202310010000,
+  "id": "2023-10-01-forktober",
+  "title": "Forktober 2023",
+  "date": "2023-10-01",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "event",
+  "description": "ACM-VIT's Hacktoberfest spin-off. Members pitched project ideas, opened repositories under the ACM-VIT GitHub org and maintained them through October, alongside a run of sessions and the first chapter blog posts on Hashnode.",
+  "location": "Online and VIT Vellore",
+  "href": "/events/forktober"
+}

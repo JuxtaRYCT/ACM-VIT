@@ -1,0 +1,12 @@
+{
+  "slug": "2025-06-07-web-workshop-backend",
+  "order": 202506071600,
+  "id": "2025-06-07-web-workshop-backend",
+  "title": "Web Unwebbed - Introduction to Backend",
+  "date": "2025-06-07",
+  "startTime": "16:00",
+  "endTime": "18:00",
+  "category": "workshop",
+  "description": "Third web session: async JavaScript, promises and the Fetch API, then Node.js, building APIs with Express and structuring code with MVC.",
+  "location": "Microsoft Teams"
+}

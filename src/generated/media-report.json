@@ -1,7 +1,7 @@
 {
-  "files": 2912,
-  "bytesTotal": 489474403,
-  "contentReferenced": 678,
+  "files": 2921,
+  "bytesTotal": 489911446,
+  "contentReferenced": 679,
   "missing": [],
   "orphanCandidates": [
     "/cassettes/cassettes-team-2022.svg",
@@ -213,6 +213,9 @@
     ],
     "/events/c2c/sponsors/events-c2c-sponsors-tricentis.svg": [
       "events/code2create"
+    ],
+    "/events/events-z0d1ak-ctf-cassette.svg": [
+      "events/z0d1ak-ctf"
     ],
     "/events/events-codart-cassette.svg": [
       "events/codart",

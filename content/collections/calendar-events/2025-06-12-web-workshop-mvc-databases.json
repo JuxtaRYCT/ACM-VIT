@@ -1,0 +1,12 @@
+{
+  "slug": "2025-06-12-web-workshop-mvc-databases",
+  "order": 202506121600,
+  "id": "2025-06-12-web-workshop-mvc-databases",
+  "title": "Web Unwebbed - MVC and Databases",
+  "date": "2025-06-12",
+  "startTime": "16:00",
+  "endTime": "18:00",
+  "category": "workshop",
+  "description": "Fourth web session: the MVC pattern in practice, routing and controllers, SQL versus NoSQL, schema design and connecting a database to a backend.",
+  "location": "Microsoft Teams"
+}

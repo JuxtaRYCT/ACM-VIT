@@ -123,8 +123,8 @@
   display: block;
 }
 
-/* ── Domain Filters ── */
-.agenda-domains {
+/* ── Category filters ── */
+.agenda-categories {
   display: flex;
   flex-wrap: wrap;
   gap: 0.3rem;
@@ -415,7 +415,7 @@
   justify-content: center;
 }
 
-.ag-ev-domain {
+.ag-ev-category {
   font-size: 0.58rem;
   font-weight: 700;
   font-family: "PolySans Mono", monospace;
@@ -662,7 +662,7 @@
   .ag-ev-end { font-size: 0.55rem; }
   .ag-ev-title { font-size: 0.78rem; }
   .ag-ev-loc { font-size: 0.58rem; }
-  .ag-ev-domain { font-size: 0.52rem; }
+  .ag-ev-category { font-size: 0.52rem; }
 
   .agenda-nav-btn {
     width: 28px;
@@ -738,7 +738,7 @@ html:not([data-theme="light"]) .ag-mini-d:hover { background: rgba(254, 252, 217
 html:not([data-theme="light"]) .ag-mini-out { color: rgba(254, 252, 217, 0.25); }
 html:not([data-theme="light"]) .ag-mini-now { background: #FF5F4A !important; color: #0d0e0d !important; }
 
-html:not([data-theme="light"]) .agenda-domains { border-bottom-color: rgba(254, 252, 217, 0.1); }
+html:not([data-theme="light"]) .agenda-categories { border-bottom-color: rgba(254, 252, 217, 0.1); }
 html:not([data-theme="light"]) .ag-dom-btn {
   background: rgba(254, 252, 217, 0.06);
   border-color: rgba(254, 252, 217, 0.12);

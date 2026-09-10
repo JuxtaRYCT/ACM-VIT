@@ -1,0 +1,13 @@
+{
+  "slug": "2026-03-11-conclave-launch",
+  "order": 202603110000,
+  "id": "2026-03-11-conclave-launch",
+  "title": "Conclave Launch",
+  "date": "2026-03-11",
+  "startTime": "00:00",
+  "endTime": "23:59",
+  "category": "launch",
+  "description": "Conclave, the chapter's own meeting platform, was approved on both the App Store and Play Store - fully cross-platform across web, iOS and Android, and open source.",
+  "location": "Online",
+  "href": "/projects/conclave"
+}

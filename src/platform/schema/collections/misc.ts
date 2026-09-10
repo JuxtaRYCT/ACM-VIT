@@ -29,8 +29,28 @@ export const gridProjectSchema = z.discriminatedUnion("kind", [
 ]);
 export type GridProjectEntry = z.infer<typeof gridProjectSchema>;
 
-export const calendarDomain = z.enum(["tech", "design", "research", "management", "cc", "blog"]);
-export type EventDomain = z.infer<typeof calendarDomain>;
+/**
+ * Calendar entries are categorised by *what kind of thing happened*, not by the
+ * domain that ran it - a full core meet and a hackathon read very differently on
+ * a calendar, whereas "tech" vs "research" does not. `blog` is not authored: the
+ * calendar injects blog posts at runtime from /api/blog-dates.
+ *
+ * There is deliberately no `recruitment` category. Board application forms and
+ * deadlines, junior core interviews and inductions - anything about selecting the
+ * next batch - never go on the public calendar, so the schema gives them nowhere
+ * to live. See content/collections/calendar-events/README.md.
+ */
+export const calendarCategory = z.enum([
+  "event",
+  "ctf",
+  "workshop",
+  "session",
+  "meeting",
+  "social",
+  "launch",
+  "blog",
+]);
+export type EventCategory = z.infer<typeof calendarCategory>;
 
 export const calendarEventSchema = z.object({
   slug: z.string(),
@@ -40,7 +60,7 @@ export const calendarEventSchema = z.object({
   date: z.string(),
   startTime: z.string(),
   endTime: z.string(),
-  domain: calendarDomain,
+  category: calendarCategory,
   description: z.string(),
   location: z.string(),
   href: z.string().optional(),

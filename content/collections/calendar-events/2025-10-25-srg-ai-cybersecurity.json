@@ -1,0 +1,13 @@
+{
+  "slug": "2025-10-25-srg-ai-cybersecurity",
+  "order": 202510252300,
+  "id": "2025-10-25-srg-ai-cybersecurity",
+  "title": "Systems Reading Group - When AI Meets Cyber Security",
+  "date": "2025-10-25",
+  "startTime": "23:00",
+  "endTime": "23:59",
+  "category": "workshop",
+  "description": "First session prepared and conducted end to end by the junior core, opening Codex Cryptum for cybersecurity awareness month: AI fundamentals, how LLMs process data, and where AI vulnerabilities show up in practice.",
+  "location": "Microsoft Teams",
+  "href": "/events/codex-cryptum"
+}

@@ -1,0 +1,188 @@
+{
+  "slug": "z0d1ak-ctf",
+  "order": 15,
+  "title": "z0d1ak CTF",
+  "tagline": "Explore the Depths",
+  "eyebrow": "ACM-VIT · International Capture the Flag",
+  "themeKey": "cc",
+  "cassetteSvg": "/events/events-z0d1ak-ctf-cassette.svg",
+  "shortDescription": "z0d1ak CTF is the flag-hunting competition run by z0d1ak, ACM-VIT's competitive CTF team - an open online Jeopardy qualifier followed by an onsite final at VIT Vellore for the twenty-five teams that make it through. Seven categories, a cash prize pool, and a field drawn from teams worldwide.",
+  "longDescription": [
+    "z0d1ak CTF is the first competition z0d1ak has run rather than entered. The team spent its first two years climbing the CTFtime rankings against the likes of Shanghai Jiao Tong, Tokyo and Karlsruhe; z0d1ak CTF turns that experience around and puts ACM-VIT on the organising side of a globally open event.",
+    "The competition runs in two stages. The qualifier is online, Jeopardy-style and open to anyone: a 36-hour window across seven categories - forensics, reverse engineering, web exploitation, OSINT, cryptography, pwn and miscellaneous - hosted on the team's own rCTF deployment at ctf.z0d1ak.org. Challenges are written by the team, and the scoreboard runs live throughout.",
+    "The top twenty-five teams from the qualifier are invited to the finals, held in person at VIT Vellore over a single nine-hour session. Dataflow Security, the vulnerability research firm, came on as prize sponsor, with Hackviser, HackerDNA, HackingHub, CyberWarfare Labs and GenXYZ backing the prize table alongside them.",
+    "Beyond the podium, prizes reach down to twenty-fifth place, every team in the top twenty-five takes home a free .xyz domain, and six separate writeup prizes reward the clearest explanations of how a challenge fell."
+  ],
+  "format": "Hybrid · Online Jeopardy qualifier into an onsite final",
+  "duration": "36-hour qualifier · 9-hour final",
+  "mode": "Hybrid",
+  "audience": "Open to teams worldwide - the qualifier takes all comers",
+  "team": "Teams · top 25 from the qualifier advance to the finals",
+  "organizedBy": "z0d1ak · ACM-VIT's CTF team",
+  "firstHeld": "2026",
+  "recurrence": "1 edition to date",
+  "registrationUrl": "https://ctf.z0d1ak.org/",
+  "primaryCtaLabel": "Visit ctf.z0d1ak.org",
+  "stats": [
+    { "value": "$1,750", "label": "Cash Prize Pool" },
+    { "value": "7", "label": "Categories" },
+    { "value": "25", "label": "Teams in the Final" },
+    { "value": "36h", "label": "Qualifier Window" }
+  ],
+  "tracks": [
+    {
+      "name": "Web Exploitation",
+      "description": "Breaking web applications - injection, auth bypasses, logic flaws and everything that falls out of a badly trusted request."
+    },
+    {
+      "name": "Reverse Engineering",
+      "description": "Pulling binaries apart to work out what they do and where the flag is hidden inside them."
+    },
+    {
+      "name": "PWN",
+      "description": "Binary exploitation - memory corruption, control-flow hijacking and turning a crash into a shell."
+    },
+    {
+      "name": "Cryptography",
+      "description": "Attacking broken schemes, weak parameters and misused primitives rather than brute-forcing them."
+    },
+    {
+      "name": "Forensics",
+      "description": "Recovering what happened from disk images, packet captures, memory dumps and file carvings."
+    },
+    {
+      "name": "OSINT",
+      "description": "Open-source intelligence - tracing a target through what has been left in public view."
+    },
+    {
+      "name": "Miscellaneous",
+      "description": "The category for everything that refuses to sit in the others, including the occasional surprise format."
+    }
+  ],
+  "schedule": [
+    {
+      "time": "21 Aug 2026 · 9:30 PM IST",
+      "title": "Qualifier Opens",
+      "description": "Challenges go live on ctf.z0d1ak.org across all seven categories."
+    },
+    {
+      "time": "23 Aug 2026 · 9:30 AM IST",
+      "title": "Qualifier Closes",
+      "description": "36 hours later. The top 25 teams on the scoreboard are invited to the finals."
+    },
+    {
+      "time": "19 Sep 2026 · 9:00 AM IST",
+      "title": "Finals Begin",
+      "description": "Qualified teams compete in person at VIT Vellore."
+    },
+    {
+      "time": "19 Sep 2026 · 6:00 PM IST",
+      "title": "Finals Close and Results",
+      "description": "Nine hours on the clock, then scoring and prize distribution."
+    }
+  ],
+  "prizes": [
+    {
+      "place": "1st",
+      "value": "$1,000 cash",
+      "note": "Plus a KWaPTA exam voucher for the team, a HackerDNA Pro team account for four months, and per-member Hackviser VIP, CAPT and CyberWarfare Labs C3SA vouchers"
+    },
+    {
+      "place": "2nd",
+      "value": "$500 cash",
+      "note": "Same voucher stack as first place, with a different HackingHub course bundle"
+    },
+    {
+      "place": "3rd",
+      "value": "$250 cash",
+      "note": "Same voucher stack, with a hands-on web exploitation course from HackingHub"
+    },
+    {
+      "place": "4th to 20th",
+      "value": "KWaPTA exam voucher per team",
+      "note": "Plus 90% off Knight Squad Academy and 30% off Hackviser VIP per member"
+    },
+    {
+      "place": "21st to 25th",
+      "value": "Academy and subscription discounts",
+      "note": "90% off Knight Squad Academy and 30% off Hackviser VIP per member"
+    },
+    {
+      "place": "Top 25 bonus",
+      "value": "A free .xyz domain for every team"
+    },
+    {
+      "place": "Best Writeup ×6",
+      "value": "$50 each",
+      "note": "Six writeups selected after the event"
+    }
+  ],
+  "highlights": [],
+  "perks": [
+    "Challenges written and hosted by z0d1ak on their own rCTF deployment",
+    "Open qualifier - no invitation or affiliation needed to enter",
+    "Live scoreboard through the whole 36-hour window",
+    "Prizes reaching down to 25th place, not just the podium",
+    "Separate writeup prizes for explaining a solve well",
+    "Certificates issued through ctf.z0d1ak.org"
+  ],
+  "faq": [
+    {
+      "q": "Who can take part?",
+      "a": "The qualifier is open - any team, anywhere, no affiliation required. The finals are limited to the twenty-five teams that place highest in the qualifier."
+    },
+    {
+      "q": "Where do the finals happen?",
+      "a": "In person at VIT Vellore, over a single nine-hour session. The qualifier before it is fully online."
+    },
+    {
+      "q": "What categories should we prepare for?",
+      "a": "Seven: web exploitation, reverse engineering, pwn, cryptography, forensics, OSINT and miscellaneous."
+    },
+    {
+      "q": "What platform does it run on?",
+      "a": "rCTF, self-hosted by the team at ctf.z0d1ak.org. Registration, challenges, the scoreboard and certificates all live there."
+    },
+    {
+      "q": "Is it beginner friendly?",
+      "a": "The category spread is deliberately wide, so there is something to solve at most levels, but it is scored as an open international CTF rather than a teaching event. If you are starting out, the team's CTF 101 writeup on the ACM-VIT blog is the better entry point."
+    },
+    {
+      "q": "Who runs it?",
+      "a": "z0d1ak, ACM-VIT's CTF team. The same team competes internationally year-round - their results and writeups are on the z0d1ak page."
+    }
+  ],
+  "socials": [
+    { "label": "Website", "href": "https://ctf.z0d1ak.org/" },
+    { "label": "Discord", "href": "https://discord.gg/MsBfw7NE8E" },
+    { "label": "CTFtime · Qualifiers", "href": "https://ctftime.org/event/3370" },
+    { "label": "CTFtime · Finals", "href": "https://ctftime.org/event/3428" },
+    { "label": "z0d1ak · Team page", "href": "/z0d1ak" },
+    { "label": "Instagram · @acmvit", "href": "https://instagram.com/acmvit" }
+  ],
+  "pastEditions": [
+    {
+      "year": "2026",
+      "edition": "z0d1ak CTF 1.0",
+      "description": "The first edition, and the first competition ACM-VIT has run on the international CTF circuit rather than entered. The online qualifier ran 21-23 August across seven categories on the team's own rCTF deployment, drawing teams from well outside VIT; the twenty-five that came through it meet in person at VIT Vellore on 19 September for a nine-hour final. Dataflow Security backed the $1,750 cash prize pool as prize sponsor.",
+      "links": [
+        { "label": "Platform", "href": "https://ctf.z0d1ak.org/" },
+        { "label": "Scoreboard", "href": "https://ctf.z0d1ak.org/scores" },
+        { "label": "CTFtime · Qualifiers", "href": "https://ctftime.org/event/3370" },
+        { "label": "CTFtime · Finals", "href": "https://ctftime.org/event/3428" }
+      ],
+      "sponsors": [
+        { "name": "Dataflow Security", "tier": "Prize Sponsor" },
+        { "name": "Hackviser" },
+        { "name": "HackerDNA" },
+        { "name": "HackingHub" },
+        { "name": "CyberWarfare Labs" },
+        { "name": "GenXYZ" }
+      ]
+    }
+  ],
+  "instagramHandle": "acmvit",
+  "hideCtaBanner": true,
+  "themeColor": "#3399BD",
+  "themeColorSecondary": "#A0B96E"
+}

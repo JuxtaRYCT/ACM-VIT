@@ -1,0 +1,12 @@
+{
+  "slug": "2024-06-19-srg-distributed-sql",
+  "order": 202406192200,
+  "id": "2024-06-19-srg-distributed-sql",
+  "title": "Systems Reading Group - Distributed OLTP/OLAP SQL",
+  "date": "2024-06-19",
+  "startTime": "22:00",
+  "endTime": "23:59",
+  "category": "workshop",
+  "description": "Third SRG meet, on distributed transactional and analytical SQL systems.",
+  "location": "Google Meet"
+}

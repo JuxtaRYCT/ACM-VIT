@@ -1,0 +1,12 @@
+{
+  "slug": "2025-06-06-srg-reinforcement-learning",
+  "order": 202506062200,
+  "id": "2025-06-06-srg-reinforcement-learning",
+  "title": "Systems Reading Group - Reinforcement Learning",
+  "date": "2025-06-06",
+  "startTime": "22:00",
+  "endTime": "23:59",
+  "category": "workshop",
+  "description": "SRG on reinforcement learning - training agents to maximise reward, and where RL shows up in games and robotics.",
+  "location": "Google Meet"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "2024-01-21-cli-top-launch",
+  "order": 202401212300,
+  "id": "2024-01-21-cli-top-launch",
+  "title": "CLI-Top Launch",
+  "date": "2024-01-21",
+  "startTime": "23:00",
+  "endTime": "23:59",
+  "category": "launch",
+  "description": "CLI-Top went live at cli-top.acmvit.in - a command-line client for VTOP, and the first project of the cycle to ship.",
+  "location": "Online",
+  "href": "/projects/cli-top"
+}

@@ -1,0 +1,13 @@
+{
+  "slug": "2024-05-28-cli-top-v2-meet",
+  "order": 202405282230,
+  "id": "2024-05-28-cli-top-v2-meet",
+  "title": "CLI-Top v2 - Planning Meet",
+  "date": "2024-05-28",
+  "startTime": "22:30",
+  "endTime": "23:59",
+  "category": "meeting",
+  "description": "Senior core met on phase two of CLI-Top: rewriting the codebase for readability, adding DA deadlines and fixing the lab attendance issue, with juniors to join once the project cycle wrapped.",
+  "location": "Google Meet",
+  "href": "/projects/cli-top"
+}

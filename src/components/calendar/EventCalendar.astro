@@ -1,5 +1,5 @@
 ---
-import { DOMAIN_COLORS } from '../../data/calendarEventsData';
+import { CATEGORY_COLORS } from '../../data/calendarEventsData';
 ---
 
 <div class="cal-container" id="cal-root">
@@ -32,7 +32,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
     </div>
   </div>
 
-  <!-- Domain Legend -->
+  <!-- Category legend -->
   <div class="cal-legend" id="cal-legend"></div>
 
   <!-- Day Headers -->
@@ -78,7 +78,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
 </div>
 
 <script>
-  import { SAMPLE_EVENTS, DOMAIN_COLORS, type CalendarEvent, type EventDomain } from '../../data/calendarEventsData';
+  import { SAMPLE_EVENTS, CATEGORY_COLORS, eventLink, type CalendarEvent, type EventCategory } from '../../data/calendarEventsData';
 
   const DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
   const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -103,10 +103,10 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
     return `${h % 12 || 12}:${String(m).padStart(2, '0')} ${ampm}`;
   }
 
-  function getEventsForDate(date: string, filters: Set<EventDomain>, allEvents: CalendarEvent[]) {
+  function getEventsForDate(date: string, filters: Set<EventCategory>, allEvents: CalendarEvent[]) {
     const events = allEvents.filter(e => e.date === date);
     if (filters.size === 0) return events;
-    return events.filter(e => filters.has(e.domain));
+    return events.filter(e => filters.has(e.category));
   }
 
   function escapeHtml(s: string) {
@@ -114,10 +114,10 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
   }
 
   // State
-  let currentDate = new Date(2026, 6, 1);
+  let currentDate = new Date();
   let viewMode: 'month' | 'week' = 'month';
   let selectedEvent: CalendarEvent | null = null;
-  let activeFilters = new Set<EventDomain>();
+  let activeFilters = new Set<EventCategory>();
   let allEvents: CalendarEvent[] = [...SAMPLE_EVENTS];
   const today = new Date();
 
@@ -131,9 +131,9 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
   const navBtns = document.querySelectorAll<HTMLButtonElement>('[data-nav]');
   const viewBtns = document.querySelectorAll<HTMLButtonElement>('[data-view]');
 
-  function toggleFilter(domain: EventDomain) {
-    if (activeFilters.has(domain)) activeFilters.delete(domain);
-    else activeFilters.add(domain);
+  function toggleFilter(category: EventCategory) {
+    if (activeFilters.has(category)) activeFilters.delete(category);
+    else activeFilters.add(category);
     renderLegend();
     renderGrid();
   }
@@ -194,7 +194,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
 
   function renderLegend() {
     legendEl.innerHTML = '';
-    (Object.entries(DOMAIN_COLORS) as [EventDomain, typeof DOMAIN_COLORS[EventDomain]][]).forEach(([key, val]) => {
+    (Object.entries(CATEGORY_COLORS) as [EventCategory, typeof CATEGORY_COLORS[EventCategory]][]).forEach(([key, val]) => {
       const active = activeFilters.size === 0 || activeFilters.has(key);
       const btn = document.createElement('button');
       btn.className = `cal-legend-pill ${active ? '' : 'cal-legend-inactive'}`;
@@ -231,7 +231,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
         const eventsWrap = document.createElement('div');
         eventsWrap.className = 'cal-day-events';
         events.slice(0, 3).forEach(ev => {
-          const c = DOMAIN_COLORS[ev.domain];
+          const c = CATEGORY_COLORS[ev.category];
           const pill = document.createElement('div');
           pill.className = 'cal-event-pill';
           pill.style.background = c.bg;
@@ -253,7 +253,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
         events.slice(0, 4).forEach(ev => {
           const dot = document.createElement('span');
           dot.className = 'cal-dot';
-          dot.style.background = DOMAIN_COLORS[ev.domain].border;
+          dot.style.background = CATEGORY_COLORS[ev.category].border;
           dotsWrap.appendChild(dot);
         });
         dayEl.appendChild(dotsWrap);
@@ -271,7 +271,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
       .slice(0, 5);
 
     items.forEach(ev => {
-      const colors = DOMAIN_COLORS[ev.domain];
+      const colors = CATEGORY_COLORS[ev.category];
       const item = document.createElement('div');
       item.className = 'cal-upcoming-item';
       item.style.borderLeftColor = colors.border;
@@ -302,7 +302,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
 
   function openModal(event: CalendarEvent) {
     selectedEvent = event;
-    const colors = DOMAIN_COLORS[event.domain];
+    const colors = CATEGORY_COLORS[event.category];
 
     const overlay = document.createElement('div');
     overlay.className = 'cal-detail-overlay';
@@ -346,8 +346,8 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
           <div class="cal-label-glow" style="background: radial-gradient(ellipse 100% 50% at 50% 120%, ${colors.border}18 0%, transparent 70%)"></div>
           <div class="cal-label-side" style="color: ${colors.border}">A SIDE</div>
 
-          <div class="cal-label-domain" style="color: ${colors.text}">
-            <span class="cal-domain-dot" style="background: ${colors.border}"></span>
+          <div class="cal-label-category" style="color: ${colors.text}">
+            <span class="cal-category-dot" style="background: ${colors.border}"></span>
             ${escapeHtml(colors.label)}
           </div>
 
@@ -370,7 +370,14 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
 
           <p class="cal-label-desc">${escapeHtml(event.description)}</p>
 
-          ${event.href ? `<a href="${event.href}" class="cal-label-link" style="color: ${colors.text}; border-color: ${colors.border}">Read Blog →</a>` : ''}
+          ${(() => {
+            const link = eventLink(event);
+            if (!link) return '';
+            const attrs = link.note ? ' target="_blank" rel="noopener noreferrer"' : '';
+            return `<div class="cal-label-cta"><a href="${link.href}"${attrs} class="cal-label-link" style="color: ${colors.text}; border-color: ${colors.border}">${escapeHtml(link.label)}</a>`
+              + (link.note ? `<span class="cal-label-link-note">${escapeHtml(link.note)}</span>` : '')
+              + `</div>`;
+          })()}
         </div>
       </div>
     `;
@@ -419,7 +426,7 @@ import { DOMAIN_COLORS } from '../../data/calendarEventsData';
         date: b.date,
         startTime: '00:00',
         endTime: '23:59',
-        domain: 'blog' as EventDomain,
+        category: "blog" as EventCategory,
         description: `Blog post published on ${b.source === 'hashnode' ? 'Hashnode' : 'Medium'}`,
         location: b.source === 'hashnode' ? 'blog.acmvit.in' : 'medium.com/acmvit',
         href: b.url,

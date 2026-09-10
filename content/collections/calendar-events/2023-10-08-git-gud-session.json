@@ -1,0 +1,13 @@
+{
+  "slug": "2023-10-08-git-gud-session",
+  "order": 202310081930,
+  "id": "2023-10-08-git-gud-session",
+  "title": "Git Gud - Git and Open Source Session",
+  "date": "2023-10-08",
+  "startTime": "19:30",
+  "endTime": "21:00",
+  "category": "workshop",
+  "description": "First Forktober session: git fundamentals and how to land a first open-source contribution.",
+  "location": "YouTube Live",
+  "href": "/events/forktober"
+}

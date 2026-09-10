@@ -122,7 +122,7 @@
   flex-shrink: 0;
 }
 
-/* ── Domain Legend ── */
+/* ── Category legend ── */
 .cal-legend {
   display: flex;
   flex-wrap: wrap;
@@ -331,9 +331,17 @@
 .cal-cassette-wrapper {
   position: relative;
   width: 100%;
-  max-width: 500px;
+  /* The label window is a fixed fraction of the cassette, so its usable height
+     is set by this width. 500px left ~177px of label - not enough for the copy
+     and the CTA together, which forced a scrollbar. */
+  max-width: min(640px, 92vw);
   aspect-ratio: 576 / 353;
   animation: calSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Short viewports: fall back to the smaller cassette so it still fits on screen. */
+@media (max-height: 620px) {
+  .cal-cassette-wrapper { max-width: min(500px, 92vw); }
 }
 
 /* ── SVG frame - fills container perfectly ── */
@@ -399,21 +407,25 @@
   text-transform: uppercase;
 }
 
-/* ── Label content - overlaid on dark cover area ── */
+/* ── Label content - overlaid on dark cover area ──
+   The cover in the frame art spans y 14..240 of 353 (3.97% -> 64.0%), so the
+   window is inset to sit just inside it. Laid out as a flex column that never
+   scrolls: the description takes the leftover room and clamps, so the CTA row
+   below it is always on screen no matter how long the copy is. */
 .cal-label-content {
   position: absolute;
-  /* Mapped to cover area: 32/576=5.56%, 18/353=5.1%, 510/576=88.5%, 220/353=62.3% */
   left: 7%;
-  top: 6.5%;
+  top: 5.2%;
   width: 85%;
-  height: 59%;
-  padding: 3.5% 4% 2% 6%;
-  overflow-y: auto;
-  scrollbar-width: none;
+  height: 58%;
+  padding: 2.6% 4% 2.2% 6%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
   z-index: 2;
 }
 
-.cal-label-content::-webkit-scrollbar { display: none; }
+.cal-label-content > * { flex: 0 0 auto; }
 
 /* Subtle horizontal lines like real cassette labels */
 .cal-label-content::before {
@@ -453,7 +465,7 @@
   z-index: 1;
 }
 
-.cal-label-domain {
+.cal-label-category {
   display: flex;
   align-items: center;
   gap: 0.35rem;
@@ -462,12 +474,12 @@
   font-family: "PolySans Mono", monospace;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.22rem;
   position: relative;
   z-index: 1;
 }
 
-.cal-domain-dot {
+.cal-category-dot {
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -478,8 +490,8 @@
   font-weight: 800;
   color: #FFFDD0;
   letter-spacing: -0.02em;
-  margin-bottom: 0.4rem;
-  line-height: 1.15;
+  margin-bottom: 0.3rem;
+  line-height: 1.1;
   position: relative;
   z-index: 1;
 }
@@ -487,8 +499,8 @@
 .cal-label-meta {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.2rem 1rem;
-  margin-bottom: 0.4rem;
+  gap: 0.15rem 1rem;
+  margin-bottom: 0.35rem;
   position: relative;
   z-index: 1;
 }
@@ -511,19 +523,31 @@
 .cal-label-desc {
   font-size: 0.78rem;
   color: rgba(255, 253, 208, 0.4);
-  line-height: 1.5;
+  line-height: 1.45;
   margin: 0;
   position: relative;
   z-index: 1;
+  /* Soaks up the leftover height and clamps to whatever fits, so a long
+     description shortens rather than pushing the CTA out of the window. */
+  flex: 1 1 auto;
+  min-height: 0;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
 
+.cal-label-cta {
+  margin-top: 8px;
+  position: relative;
+  z-index: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .cal-label-link {
   display: inline-block;
-  margin-top: 8px;
   padding: 4px 12px;
   font-size: 0.7rem;
   font-family: 'PolySans Mono', monospace;
@@ -540,6 +564,23 @@
 .cal-label-link:hover {
   opacity: 0.8;
 }
+
+/* Sits beside the CTA rather than under it - the cassette label is a fixed-height
+   scroll box, and a second stacked line pushes the note out of view. */
+.cal-label-link-note {
+  display: inline-block;
+  margin: 0 0 0 10px;
+  font-size: 0.58rem;
+  font-family: 'PolySans Mono', monospace;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: rgba(255, 253, 208, 0.4);
+  vertical-align: middle;
+  position: relative;
+  z-index: 1;
+}
+
+html[data-theme="light"] .cal-label-link-note { color: rgba(26, 26, 26, 0.45); }
 
 /* ── Upcoming Events ── */
 .cal-upcoming {
@@ -731,10 +772,16 @@
   }
 
   .cal-cassette-wrapper { max-width: 95vw; }
-  .cal-label-content { padding: 3% 3.5% 2% 5.5%; }
-  .cal-label-title { font-size: 1rem; }
-  .cal-label-meta > span { font-size: 0.55rem; }
-  .cal-label-desc { font-size: 0.6rem; -webkit-line-clamp: 2; }
+  /* Tighter rhythm so the copy still gets a few lines once the CTA has its row. */
+  .cal-label-content { padding: 2.4% 3.5% 2% 5.5%; }
+  .cal-label-category { font-size: 0.58rem; margin-bottom: 0.15rem; }
+  .cal-label-title { font-size: 0.95rem; margin-bottom: 0.2rem; }
+  .cal-label-meta { gap: 0.1rem 0.6rem; margin-bottom: 0.25rem; }
+  .cal-label-meta > span { font-size: 0.52rem; }
+  .cal-label-desc { font-size: 0.58rem; -webkit-line-clamp: 3; }
+  .cal-label-cta { margin-top: 5px; white-space: normal; }
+  .cal-label-link { padding: 3px 9px; font-size: 0.6rem; }
+  .cal-label-link-note { font-size: 0.5rem; margin-left: 7px; }
   .cal-detail-close { width: 18px; height: 18px; }
   .cal-detail-close svg { width: 8px; height: 8px; }
   .cal-upcoming-item { padding: 0.55rem 0.5rem; }
@@ -856,7 +903,7 @@ html[data-theme="light"] .cal-day-other { opacity: 0.4; }
 html[data-theme="light"] .cal-day-other .cal-day-num { color: #666; }
 html[data-theme="light"] .cal-day-more { color: #555; }
 
-/* ── Event Pills - darken domain colors for light bg ── */
+/* ── Event Pills - darken category colors for light bg ── */
 html[data-theme="light"] .cal-event-pill {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
 }

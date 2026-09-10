@@ -1,0 +1,13 @@
+{
+  "slug": "2024-07-29-cli-rpg-launch",
+  "order": 202407292100,
+  "id": "2024-07-29-cli-rpg-launch",
+  "title": "CLI-RPG Launch",
+  "date": "2024-07-29",
+  "startTime": "21:00",
+  "endTime": "23:59",
+  "category": "launch",
+  "description": "Launch of CLI-RPG: Mystery of the Forgotten, a command-line murder-mystery RPG written in Rust over 40 days, with minigames and an audio visualiser. Executables at cli-rpg.acmvit.in.",
+  "location": "Google Meet",
+  "href": "/projects/cli-rpg"
+}
